@@ -46,7 +46,7 @@ const NewsEvent = () => {
       {/* event - pc*/}
       <motion.div 
         className="hidden md:grid mt-[0.5%] w-[64%] aspect-[1304/477] bg-cover bg-center bg-no-repeat bg-[url('/images/pc-fr-news-event.png')]
-        pt-[2%] pb-[1%] pl-[2%] pr-[1%] grid-cols-[0.55fr_auto]"
+        pt-[2%] pb-[1%] pl-[2%] pr-[1%] grid-cols-[55%_45%]"
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 0.3 }}
@@ -126,7 +126,7 @@ const NewsEvent = () => {
                 </div>
                 <div className="col-span-1 w-full grid grid-cols-[0.8fr_0.2fr] text-[1vw]">
                   <motion.div whileHover={{ scale: 1.02 }} className="overflow-hidden">
-                    <Link href={String("/tin-tuc/"+val.postId)} className="w-full truncate block hover:text-purple-500 transition-colors duration-300">
+                    <Link href={String("/tin-tuc/"+val.postId)} className="w-full truncate block hover:cursor-pointer hover:text-purple-500 transition-colors duration-300">
                       {val.title}
                     </Link>
                   </motion.div>
@@ -149,13 +149,7 @@ const NewsEvent = () => {
             transition={{ duration: 0.6, delay: 0.5 }}
             viewport={{ once: true }}
           >
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ duration: 0.2 }}
-            >
-              <Link href="/tin-tuc" className="w-[30%] aspect-[186/59] bg-cover bg-center bg-no-repeat bg-[url('/images/btn-view-more.png')] hover:brightness-110 transition-all duration-300 block"></Link>
-            </motion.div>
+            <Link href="/tin-tuc" className="w-[30%] aspect-[186/59] bg-cover bg-center bg-no-repeat bg-[url('/images/btn-view-more.png')] hover:brightness-110 transition-all duration-300 block"></Link>
           </motion.div>
         </div>
       </motion.div>
@@ -269,13 +263,7 @@ const NewsEvent = () => {
           transition={{ duration: 0.6, delay: 0.5 }}
           viewport={{ once: true }}
         >
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ duration: 0.2 }}
-          >
-            <Link href="/tin-tuc" className="w-[35%] aspect-[186/59] bg-cover bg-center bg-no-repeat bg-[url('/images/btn-view-more.png')] hover:brightness-110 transition-all duration-300 block"></Link>
-          </motion.div>
+          <Link href="/tin-tuc" className="w-[35%] aspect-[186/59] bg-cover bg-center bg-no-repeat bg-[url('/images/btn-view-more.png')] hover:brightness-110 transition-all duration-300 block"></Link>
         </motion.div>
       </motion.div>
 

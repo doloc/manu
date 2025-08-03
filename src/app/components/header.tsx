@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React, { useState, useEffect } from "react";
 
 const navLinks = [
@@ -26,6 +27,7 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const { scrollY } = useScroll();
+  const router = useRouter();
   
   // Transform scroll values for animations
   const headerHeight = isMobile 
@@ -139,6 +141,7 @@ const Header = () => {
           className="h-[75%] object-contain"
           whileTap={{ scale: 0.9 }}
           transition={{ duration: 0.2 }}
+          onClick={() => router.push('/')}
         />
         <motion.img 
           src="/images/btn-topup.png" 

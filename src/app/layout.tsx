@@ -79,10 +79,9 @@ export const metadata: Metadata = {
           'Game Lục địa Manu - Zalo là một trong các game nhập vai miễn phí với lối chơi hấp dẫn được nhiều người ưu chuộng bậc nhất hiện nay. Người chơi sẽ hóa thân thành những chiến binh đến từ các lục địa khác nhau, tham gia vào các trận chiến đấu để bảo vệ lục địa của mình. Game gọn nhẹ, trải nghiệm mượt mà, không nóng máy hao pin, đặc biệt game mang lại cảm giác chân thật và cảm xúc cao trào qua từng thước game. Game có nhiều sự kiện hấp dẫn và nhận quà miễn phí mỗi ngày',
   },
   icons: {
-    icon: [
-      { url: '/images/logo-manu.png', sizes: '32x32', type: 'image/png' },
-      { url: '/images/logo-manu.png', sizes: '16x16', type: 'image/png' },
-    ],
+    icon: '/images/logo-manu.png',
+    shortcut: '/images/logo-manu.png',
+    apple: '/images/logo-manu.png',
   },
 };
 
