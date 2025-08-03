@@ -29,7 +29,7 @@ const Header = () => {
   
   // Transform scroll values for animations
   const headerHeight = isMobile 
-    ? useTransform(scrollY, [0, 85], [85, 80]) 
+    ? useTransform(scrollY, [0, 83], [83, 75]) 
     : useTransform(scrollY, [0, 100], [100, 80]);
   const headerOpacity = useTransform(scrollY, [0, 50], [0.7, 0.95]);
   const headerBlur = useTransform(scrollY, [0, 50], [0, 10]);
@@ -136,8 +136,8 @@ const Header = () => {
         <motion.img 
           src="/images/logo-manu.png" 
           alt="logo" 
-          className="h-[80%] object-contain"
-          whileHover={{ scale: 1.05 }}
+          className="h-[75%] object-contain"
+          whileTap={{ scale: 0.9 }}
           transition={{ duration: 0.2 }}
         />
         <motion.img 

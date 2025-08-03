@@ -288,7 +288,7 @@ const NewsEvent = () => {
         transition={{ duration: 1, delay: 0.5 }}
         viewport={{ once: true }}
       >
-        <div className="w-full h-full grid grid-cols-4 gap-4 md:gap-6 items-center justify-items-center">
+        <div className="w-full grid grid-cols-4 gap-4 md:gap-6 items-center justify-items-center">
           {[
             { src: "/images/fr-huongdannapthe.png", alt: "Hướng dẫn nạp thẻ" },
             { src: "/images/fr-hotro.png", alt: "Hỗ trợ" },
