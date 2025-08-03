@@ -169,13 +169,34 @@ const NewsEvent = () => {
         viewport={{ once: true }}
       >
         <motion.div 
-          className="relative w-full aspect-[688/402]"
-          whileHover={{ scale: 1.02 }}
+          className="relative w-full aspect-[688/402] overflow-hidden "
           transition={{ duration: 0.3 }}
         >
-          <img src="/images/banner-event.jpg" alt="" className="w-full h-full object-cover" />
-          <img src="/images/pc-fr-news-effect.png" alt="" className="absolute pointer-events-none top-0 left-0 w-full scale-107 object-contain" />
+          {imgSource.length && (
+            <Swiper
+              modules={[EffectCoverflow]}
+              effect={"coverflow"}
+              grabCursor={true}
+              centeredSlides={true}
+              slidesPerView={"auto"}
+              coverflowEffect={{
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+              }}
+              className="w-full h-full flex justify-center items-center"
+            >
+              {imgSource.map((item, idx) => (
+                <SwiperSlide key={idx} style={{width: '100%'}}>
+                  <img src={item} alt="" className="w-full h-full object-cover" />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          )}
         </motion.div>
+        <img src="/images/pc-fr-news-effect.png" alt="" className="z-10 absolute pointer-events-none top-0 left-0 w-full scale-107 object-contain" />
         <div className="mt-[5%] w-full h-[47%] px-[7%]">
           <div className="w-full h-full overflow-hidden text-[#422986] text-[4vw]">
             {loading && (
