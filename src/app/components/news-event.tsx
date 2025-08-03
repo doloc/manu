@@ -19,7 +19,6 @@ const NewsEvent = () => {
       .then((data) => {
         setData(data.data);
         setImgSource(data.data.map((item: any) => item.thumbnail));
-        console.log(data.data.map((item: any) => item.thumbnail));
       })
       .finally(() => setLoading(false));
   }, []);
@@ -69,7 +68,6 @@ const NewsEvent = () => {
                   modifier: 1,
                   slideShadows: true,
                 }}
-                loop={true}
                 className="w-full h-full flex justify-center items-center"
               >
                 {imgSource.map((item, idx) => (

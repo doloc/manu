@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import Footer from "./components/footer";
+import LoadingScreen from "./components/loading-screen";
 
 const beaufortforLOL = localFont({
   src: [
@@ -77,7 +78,10 @@ export const metadata: Metadata = {
           'Game Lục địa Manu - Zalo là một trong các game nhập vai miễn phí với lối chơi hấp dẫn được nhiều người ưu chuộng bậc nhất hiện nay. Người chơi sẽ hóa thân thành những chiến binh đến từ các lục địa khác nhau, tham gia vào các trận chiến đấu để bảo vệ lục địa của mình. Game gọn nhẹ, trải nghiệm mượt mà, không nóng máy hao pin, đặc biệt game mang lại cảm giác chân thật và cảm xúc cao trào qua từng thước game. Game có nhiều sự kiện hấp dẫn và nhận quà miễn phí mỗi ngày',
   },
   icons: {
-    icon: '/favicon.ico',
+    icon: [
+      { url: '/images/logo-manu.png', sizes: '32x32', type: 'image/png' },
+      { url: '/images/logo-manu.png', sizes: '16x16', type: 'image/png' },
+    ],
   },
 };
 
@@ -89,12 +93,22 @@ export default function RootLayout({
   return (
     <html lang="vi" className="mdl-js">
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        {/* Preload critical images */}
+        <link rel="preload" as="image" href="/images/logo-manu.png" />
+        <link rel="preload" as="image" href="/images/banner-light.jpg" />
+        <link rel="preload" as="image" href="/images/banner-dark.jpg" />
+        <link rel="preload" as="image" href="/images/pc-hero-effect.png" />
+        <link rel="preload" as="image" href="/images/mb-hero-effect.png" />
+        {/* Preload videos */}
+        <link rel="preload" as="video" href="/images/pc-hero-vid.webm" media="(min-width: 768px)" />
+        <link rel="preload" as="video" href="/images/mb-hero-vid.webm" media="(max-width: 767px)" />
+
       </head>
       <body
         className={`${beaufortforLOL.variable} font-sans antialiased`}
         style={{ fontFamily: beaufortforLOL.style.fontFamily }}
       >
+        <LoadingScreen />
         {children}
         <Footer />
         <Toaster 

@@ -24,10 +24,6 @@ const features = [
     image: '/images/banner-dark.jpg',
     alt: 'Feature 4',
   },
-  {
-    image: 'https://nhatmongvolam.zagoo.vn/static/media/banner-1.4880ad4522bac0cef3e3.jpg',
-    alt: 'Feature 5',
-  },
 ];
 
 const Feature = () => {
@@ -71,7 +67,7 @@ const Feature = () => {
           }}
           whileTap={{ scale: 0.9 }}
         >
-          <img src="/images/prev.png" alt="Prev" className="w-[45%] md:w-[70%] object-cover" />
+          <img src="/images/prev.png" alt="Prev" className="w-[45%] md:w-[70%] object-cover" loading="lazy" />
         </motion.div>
 
         {/* MB - Custom Prev Button */}
