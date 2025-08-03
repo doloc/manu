@@ -5,7 +5,8 @@ import Header from "./components/header";
 import Hero from "./components/hero";
 import Feature from "./components/feature";
 import Floating from "./components/floating";
-import { Fragment, useRef } from "react";
+import { useRef } from "react";
+import Footer from "./components/footer";
 
 export default function Home() {
   const topRef = useRef<HTMLDivElement>(null);
@@ -20,6 +21,7 @@ export default function Home() {
       <Hero />
       <NewsEvent />
       <Feature />
+      <Footer />
       <Floating onScrollToTop={scrollToTop} />
     </div>
   );

@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { fetchPosts } from "../lib/api";
+import { fetchPosts } from "../../lib/api";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { FaAnglesLeft, FaAnglesRight } from "react-icons/fa6";

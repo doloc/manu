@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
-import Footer from "./components/footer";
 import LoadingScreen from "./components/loading-screen";
 
 const beaufortforLOL = localFont({
@@ -110,7 +109,6 @@ export default function RootLayout({
       >
         <LoadingScreen />
         {children}
-        <Footer />
         <Toaster 
           position="top-right"
           toastOptions={{

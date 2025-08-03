@@ -2,16 +2,22 @@
 
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
-import Header from "../components/header";
-import Hero from "../components/tin-tuc/hero";
+import Header from "../../components/header";
+import Hero from "../../components/tin-tuc/hero";
+import Footer from "../../components/footer";
+import Floating from "../../components/floating";
+import { useRef } from "react";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname();
-  console.log(pathname);
-  
+  const topRef = useRef<HTMLDivElement>(null);
+
+  const scrollToTop = () => {
+    topRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <>
-      <Header />
+    <div ref={topRef} className="w-full h-full">
       <Hero />
       <motion.div 
         className="z-20 absolute top-[35%] md:top-[52%] left-1/2 transform -translate-x-1/2 w-[45%] md:w-[27%] aspect-[518/136] bg-cover bg-center bg-no-repeat bg-[url('/images/tin-tuc/bg-btn.png')] flex justify-center items-center"
@@ -71,7 +77,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           {children}
         </motion.div>
       </motion.section>
-    </>
+    </div>
   );
 };
 
