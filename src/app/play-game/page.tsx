@@ -12,7 +12,7 @@ const PlayGame = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="overflow-hidden h-full max-w-2xl bg-cover bg-center bg-no-repeat bg-[url('/images/play-game/bg.jpg')] flex flex-col items-center">
+      <div className="overflow-hidden h-full max-w-2xl bg-cover bg-center bg-no-repeat bg-[url('/images/play-game/bg.webp')] flex flex-col items-center">
         <motion.div 
           className="absolute w-full max-w-2xl flex flex-col items-end"
           initial={{ y: -50, opacity: 0 }}
@@ -20,7 +20,7 @@ const PlayGame = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <motion.img 
-            src="/images/logo-manu.png" 
+            src="/images/logo-manu.webp" 
             alt="" 
             className="w-[30%] mt-[2%] object-contain"
             initial={{ scale: 0.8, opacity: 0 }}
@@ -28,7 +28,7 @@ const PlayGame = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
           />
           <motion.img 
-            src="/images/play-game/tagage.png" 
+            src="/images/play-game/tagage.webp" 
             alt="" 
             className="mr-[2%] w-[20%] object-contain"
             initial={{ x: 50, opacity: 0 }}
@@ -37,7 +37,7 @@ const PlayGame = () => {
           />
         </motion.div>
         <motion.img 
-          src="/images/play-game/tagline.png" 
+          src="/images/play-game/tagline.webp" 
           alt="" 
           className="mt-[40vh] md:mt-[80%] w-full object-contain"
           initial={{ y: 100, opacity: 0 }}
@@ -45,7 +45,7 @@ const PlayGame = () => {
           transition={{ duration: 0.8, delay: 0.8 }}
         />
         <motion.img 
-          src="/images/play-game/btn-playnow.png" 
+          src="/images/play-game/btn-playnow.webp" 
           alt="" 
           className="mt-[2vh] w-[70%] object-contain btn-image"
           initial={{ scale: 0.8, opacity: 0 }}
@@ -83,19 +83,19 @@ const PlayGame = () => {
           transition={{ duration: 0.6, delay: 1.6 }}
         >
           <motion.img 
-            src="/images/play-game/btn-home.png" 
+            src="/images/play-game/btn-home.webp" 
             alt="" 
             className="w-[30%] object-contain btn-image"
             whileTap={{ scale: 0.95 }}
           />
           <motion.img 
-            src="/images/play-game/btn-support.png" 
+            src="/images/play-game/btn-support.webp" 
             alt="" 
             className="w-[30%] object-contain btn-image"
             whileTap={{ scale: 0.95 }}
           />
           <motion.img 
-            src="/images/play-game/btn-policy.png" 
+            src="/images/play-game/btn-policy.webp" 
             alt="" 
             className="w-[30%] object-contain btn-image"
             whileTap={{ scale: 0.95 }}

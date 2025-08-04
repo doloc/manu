@@ -36,7 +36,7 @@ const LoadingScreen = () => {
         >
           <div className="text-center">
             <motion.img
-              src="/images/logo-manu.png"
+              src="/images/logo-manu.webp"
               alt="Logo"
               className="w-32 h-32 mx-auto mb-8"
               initial={{ scale: 0.8, opacity: 0 }}

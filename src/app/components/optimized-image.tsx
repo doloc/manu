@@ -15,7 +15,7 @@ const OptimizedImage = ({
   src, 
   alt, 
   className = "", 
-  placeholder = "/images/placeholder.jpg",
+  placeholder = "/images/placeholder.webp",
   priority = false 
 }: OptimizedImageProps) => {
   const [isLoaded, setIsLoaded] = useState(false);

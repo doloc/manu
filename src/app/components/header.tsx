@@ -111,7 +111,7 @@ const Header = () => {
             </motion.div>
             {idx !== navLinks.length - 1 && (
               <motion.img 
-                src="/images/icon-nav.png" 
+                src="/images/icon-nav.webp" 
                 alt="line" 
                 className="w-[1%] object-contain bg-transparent ml-[2%]" 
                 initial={{ scale: 0, opacity: 0 }}
@@ -136,7 +136,7 @@ const Header = () => {
         style={{ height: headerHeight }}
       >
         <motion.img 
-          src="/images/logo-manu.png" 
+          src="/images/logo-manu.webp" 
           alt="logo" 
           className="h-[75%] object-contain"
           whileTap={{ scale: 0.9 }}
@@ -144,14 +144,14 @@ const Header = () => {
           onClick={() => router.push('/')}
         />
         <motion.img 
-          src="/images/btn-topup.png" 
+          src="/images/btn-topup.webp" 
           alt="" 
           className="h-[45%] object-contain cursor-pointer"
           whileTap={{ scale: 0.9 }}
           transition={{ duration: 0.2 }}
         />
         <motion.img 
-          src="/images/btn-playnow.png" 
+          src="/images/btn-playnow.webp" 
           alt="" 
           className="h-[45%] object-contain cursor-pointer"
           whileTap={{ scale: 0.9 }}
@@ -159,7 +159,7 @@ const Header = () => {
         />
         {isMenuOpen ? (
           <motion.img 
-            src="/images/icon-close.png" 
+            src="/images/icon-close.webp" 
             alt="" 
             className="h-[45%] object-contain cursor-pointer"
             initial={{ rotate: 0 }}
@@ -169,7 +169,7 @@ const Header = () => {
           />
         ) : (
           <motion.img 
-            src="/images/icon-menu.png" 
+            src="/images/icon-menu.webp" 
             alt="" 
             className="h-[45%] object-contain cursor-pointer"
             initial={{ rotate: 180 }}
@@ -192,7 +192,7 @@ const Header = () => {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div 
-            className="absolute -z-10 top-0 left-0 right-0 w-full bg-cover bg-center bg-no-repeat aspect-[640/613] bg-[url('/images/mb-menu-tab.png')] flex justify-center"
+            className="absolute -z-10 top-0 left-0 right-0 w-full bg-cover bg-center bg-no-repeat aspect-[640/613] bg-[url('/images/mb-menu-tab.webp')] flex justify-center"
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -50 }}

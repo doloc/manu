@@ -68,7 +68,7 @@ export const metadata: Metadata = {
   openGraph: {
       images: [
           {
-              url: `/images/banner-light.jpg`,
+              url: `/images/banner-light.webp`,
               width: 550,
               height: 310,
               alt: 'Lục địa Manu H5 - Zalo',
@@ -78,9 +78,11 @@ export const metadata: Metadata = {
           'Game Lục địa Manu - Zalo là một trong các game nhập vai miễn phí với lối chơi hấp dẫn được nhiều người ưu chuộng bậc nhất hiện nay. Người chơi sẽ hóa thân thành những chiến binh đến từ các lục địa khác nhau, tham gia vào các trận chiến đấu để bảo vệ lục địa của mình. Game gọn nhẹ, trải nghiệm mượt mà, không nóng máy hao pin, đặc biệt game mang lại cảm giác chân thật và cảm xúc cao trào qua từng thước game. Game có nhiều sự kiện hấp dẫn và nhận quà miễn phí mỗi ngày',
   },
   icons: {
-    icon: '/images/logo-manu.png',
-    shortcut: '/images/logo-manu.png',
-    apple: '/images/logo-manu.png',
+    icon: '/images/logo-manu.webp',
+    shortcut: '/images/logo-manu.webp',
+    apple: '/images/logo-manu.webp',
+    sizes: '32x32',
+    type: 'image/webp',
   },
 };
 
@@ -92,16 +94,17 @@ export default function RootLayout({
   return (
     <html lang="vi" className="mdl-js">
       <head>
-        {/* Preload critical images */}
-        <link rel="preload" as="image" href="/images/logo-manu.png" />
-        <link rel="preload" as="image" href="/images/banner-light.jpg" />
-        <link rel="preload" as="image" href="/images/banner-dark.jpg" />
-        <link rel="preload" as="image" href="/images/pc-hero-effect.png" />
-        <link rel="preload" as="image" href="/images/mb-hero-effect.png" />
-        {/* Preload videos */}
-        <link rel="preload" as="video" href="/images/pc-hero-vid.webm" media="(min-width: 768px)" />
-        <link rel="preload" as="video" href="/images/mb-hero-vid.webm" media="(max-width: 767px)" />
-
+        {/* Preload critical images - only for pages that use them */}
+        <link rel="preload" as="image" href="/images/logo-manu.webp" />
+        
+        {/* Preload play-game specific images */}
+        <link rel="preload" as="image" href="/images/play-game/bg.webp" />
+        <link rel="preload" as="image" href="/images/play-game/tagline.webp" />
+        <link rel="preload" as="image" href="/images/play-game/btn-playnow.webp" />
+        <link rel="preload" as="image" href="/images/play-game/tagage.webp" />
+        <link rel="preload" as="image" href="/images/play-game/btn-home.webp" />
+        <link rel="preload" as="image" href="/images/play-game/btn-support.webp" />
+        <link rel="preload" as="image" href="/images/play-game/btn-policy.webp" />
       </head>
       <body
         className={`${beaufortforLOL.variable} font-sans antialiased`}

@@ -25,12 +25,12 @@ const Hero = () => {
         transition={{ duration: 0.5 }}
       >
         <img
-          src="/images/banner-light.jpg"
+          src="/images/banner-light.webp"
           alt=""
           className="hidden md:block w-full h-full object-cover"
         />
         <img
-          src="/images/mb-banner-light.jpg"
+          src="/images/mb-banner-light.webp"
           alt=""
           className="md:hidden w-full h-full object-cover"
         />
@@ -73,7 +73,7 @@ const Hero = () => {
 
       {/* Logo */}
       <motion.img 
-        src="/images/logo-manu.png" 
+        src="/images/logo-manu.webp" 
         alt="logo" 
         className="hidden md:block absolute top-[8%] left-[4%] w-[19%] object-contain"
         initial={{ x: -100, opacity: 0, scale: 0.8 }}
@@ -87,7 +87,7 @@ const Hero = () => {
 
       {/* PC Hero Effect */}
       <motion.img 
-        src="/images/pc-hero-effect.png" 
+        src="/images/pc-hero-effect.webp" 
         alt="" 
         className="z-10 hidden md:block absolute bottom-0 w-full object-contain"
         initial={{ y: 100, opacity: 0 }}
@@ -101,7 +101,7 @@ const Hero = () => {
 
       {/* Mobile Scrolling Icon */}
       <motion.img 
-        src="/images/scrolling.png" 
+        src="/images/scrolling.webp" 
         alt="" 
         className="md:hidden absolute bottom-[5%] w-[40%] object-contain"
         initial={{ y: 50, opacity: 0 }}
@@ -125,7 +125,7 @@ const Hero = () => {
 
       {/* Mobile Hero Effect */}
       <motion.img 
-        src="/images/mb-hero-effect.png" 
+        src="/images/mb-hero-effect.webp" 
         alt="" 
         className="z-10 md:hidden absolute -bottom-[1%] w-full object-contain"
         initial={{ y: 100, opacity: 0 }}

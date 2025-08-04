@@ -96,7 +96,7 @@ nav a,
 
 .swiper-pagination-custom .swiper-pagination-bullet {
   background-color: transparent !important;
-  background-image: url('/images/dot.png') !important;
+  background-image: url('/images/dot.webp') !important;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
@@ -111,7 +111,7 @@ nav a,
 }
 
 .swiper-pagination-custom .swiper-pagination-bullet:hover {
-  background-image: url('/images/dot-active.png') !important;
+  background-image: url('/images/dot-active.webp') !important;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
@@ -120,7 +120,7 @@ nav a,
 }
 
 .swiper-pagination-custom .swiper-pagination-bullet-active {
-  background-image: url('/images/dot-active.png') !important;
+  background-image: url('/images/dot-active.webp') !important;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;

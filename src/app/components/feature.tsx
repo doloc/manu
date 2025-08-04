@@ -9,19 +9,19 @@ import 'swiper/css/pagination';
 
 const features = [
   {
-    image: '/images/banner-event.jpg',
+    image: '/images/banner-event.webp',
     alt: 'Feature 1',
   },
   {
-    image: '/images/banner-feature.jpg',
+    image: '/images/banner-feature.webp',
     alt: 'Feature 2',
   },
   {
-    image: '/images/banner-light.jpg',
+    image: '/images/banner-light.webp',
     alt: 'Feature 3',
   },
   {
-    image: '/images/banner-dark.jpg',
+    image: '/images/banner-dark.webp',
     alt: 'Feature 4',
   },
 ];
@@ -30,14 +30,14 @@ const Feature = () => {
   return (
     <motion.section 
       className="relative w-full aspect-[640/589] md:aspect-[1920/861] bg-cover bg-center bg-no-repeat
-      bg-[url('/images/mb-feature-bg.jpg')] md:bg-[url('/images/pc-feature-bg.jpg')] flex flex-col items-center"
+      bg-[url('/images/mb-feature-bg.webp')] md:bg-[url('/images/pc-feature-bg.webp')] flex flex-col items-center"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       viewport={{ once: true }}
     >
       <motion.img 
-        src="/images/feature-title.png" 
+        src="/images/feature-title.webp" 
         alt="feature-title" 
         className="mt-[5%] md:mt-0 w-[70%] md:w-[35%] object-contain"
         initial={{ y: -50, opacity: 0, scale: 0.8 }}
@@ -67,7 +67,7 @@ const Feature = () => {
           }}
           whileTap={{ scale: 0.9 }}
         >
-          <img src="/images/prev.png" alt="Prev" className="w-[45%] md:w-[70%] object-cover" loading="lazy" />
+          <img src="/images/prev.webp" alt="Prev" className="w-[45%] md:w-[70%] object-cover" loading="lazy" />
         </motion.div>
 
         {/* MB - Custom Prev Button */}
@@ -83,7 +83,7 @@ const Feature = () => {
           }}
           whileTap={{ scale: 0.9 }}
         >
-          <img src="/images/prev.png" alt="Prev" className="w-[45%] md:w-[70%] object-cover" />
+          <img src="/images/prev.webp" alt="Prev" className="w-[45%] md:w-[70%] object-cover" />
         </motion.div>
 
         <motion.div 
@@ -117,7 +117,7 @@ const Feature = () => {
           >
             {features.map((feature, idx) => (
               <SwiperSlide key={idx} className='swiper-slide' style={{width: '65%'}}>
-                <div className="w-full p-[2%] overflow-hidden aspect-[1048/596] flex items-center justify-center bg-cover bg-center bg-no-repeat bg-[url('/images/fr-banner.png')]">
+                <div className="w-full p-[2%] overflow-hidden aspect-[1048/596] flex items-center justify-center bg-cover bg-center bg-no-repeat bg-[url('/images/fr-banner.webp')]">
                   <motion.img
                     src={feature.image}
                     alt={feature.alt}
@@ -150,7 +150,7 @@ const Feature = () => {
           }}
           whileTap={{ scale: 0.9 }}
         >
-          <img src="/images/next.png" alt="Next" className="w-[45%] md:w-[70%] object-cover" />
+          <img src="/images/next.webp" alt="Next" className="w-[45%] md:w-[70%] object-cover" />
         </motion.div>
 
         {/* MB - Custom Next Button */}
@@ -166,7 +166,7 @@ const Feature = () => {
           }}
           whileTap={{ scale: 0.9 }}
         >
-          <img src="/images/next.png" alt="Next" className="w-[45%] md:w-[70%] object-cover" />
+          <img src="/images/next.webp" alt="Next" className="w-[45%] md:w-[70%] object-cover" />
         </motion.div>
 
         {/* Custom Pagination */}

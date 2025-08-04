@@ -78,7 +78,7 @@ const NewsPage = () => {
                     <span className="text-xs md:text-[1vw] font-semibold truncate flex-1 min-w-0 hover:cursor-pointer hover:text-purple-500 transition-colors duration-300" onClick={() => router.push(String("/tin-tuc/"+item.postId))}>{item.title}</span>
                     {idx < 2 ? 
                       <motion.img 
-                        src="/images/hot-news.png" 
+                        src="/images/hot-news.webp" 
                         alt="Title" 
                         className="w-[15%] object-contain"
                         animate={{ 
@@ -108,7 +108,7 @@ const NewsPage = () => {
                   transition={{ duration: 0.6, delay: 0.5 }}
                   viewport={{ once: true }}
                 >
-                  <Link href={String("/tin-tuc/"+item.postId)} className="w-[45%] md:w-[30%] aspect-[186/59] bg-cover bg-center bg-no-repeat bg-[url('/images/btn-view-more.png')] hover:brightness-110 transition-all duration-300 block"></Link>
+                  <Link href={String("/tin-tuc/"+item.postId)} className="w-[45%] md:w-[30%] aspect-[186/59] bg-cover bg-center bg-no-repeat bg-[url('/images/btn-view-more.webp')] hover:brightness-110 transition-all duration-300 block"></Link>
                 </motion.div>
               </div>
             </div>
@@ -136,7 +136,7 @@ const NewsPage = () => {
         <motion.button
           onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
           disabled={currentPage === 1}
-          className={`mr-[2%] w-[4%] aspect-[50/47] bg-cover bg-center bg-no-repeat bg-[url('/images/tin-tuc/prev.png')] ${currentPage === 1 ? 'opacity-50 cursor-not-allowed' : 'hover:scale-110'}`}
+          className={`mr-[2%] w-[4%] aspect-[50/47] bg-cover bg-center bg-no-repeat bg-[url('/images/tin-tuc/prev.webp')] ${currentPage === 1 ? 'opacity-50 cursor-not-allowed' : 'hover:scale-110 hover:brightness-110 hover:cursor-pointer'}`}
           whileHover={{ scale: currentPage === 1 ? 1 : 1.1 }}
           whileTap={{ scale: 0.95 }}
           transition={{ duration: 0.2 }}
@@ -197,7 +197,7 @@ const NewsPage = () => {
         <motion.button
           onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
           disabled={currentPage === totalPages}
-          className={`ml-[2%] w-[4%] aspect-[50/47] bg-cover bg-center bg-no-repeat bg-[url('/images/tin-tuc/next.png')] transition ${currentPage === totalPages ? 'opacity-50 cursor-not-allowed' : 'hover:scale-110'}`}
+          className={`ml-[2%] w-[4%] aspect-[50/47] bg-cover bg-center bg-no-repeat bg-[url('/images/tin-tuc/next.webp')] transition ${currentPage === totalPages ? 'opacity-50 cursor-not-allowed' : 'hover:scale-110 hover:brightness-110 hover:cursor-pointer'}`}
           whileHover={{ scale: currentPage === totalPages ? 1 : 1.1 }}
           whileTap={{ scale: 0.95 }}
           transition={{ duration: 0.2 }}

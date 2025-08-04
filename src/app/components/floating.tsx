@@ -25,10 +25,10 @@ const Floating: FC<{
   }
 
   const floatingButtons = [
-    { src: "/images/btn-napthe.png", alt: "Nạp thẻ", aspectRatio: '138/115' },
-    { src: "/images/btn-nhapcode.png", alt: "Cộng đồng", aspectRatio: '137/47' },
-    { src: "/images/btn-zalo.png", alt: "Zalo", aspectRatio: '137/36' },
-    { src: "/images/btn-fb.png", alt: "FB", aspectRatio: '137/36' }
+    { src: "/images/btn-napthe.webp", alt: "Nạp thẻ", aspectRatio: '138/115' },
+    { src: "/images/btn-nhapcode.webp", alt: "Cộng đồng", aspectRatio: '137/47' },
+    { src: "/images/btn-zalo.webp", alt: "Zalo", aspectRatio: '137/36' },
+    { src: "/images/btn-fb.webp", alt: "FB", aspectRatio: '137/36' }
   ];
 
   return (
@@ -36,7 +36,7 @@ const Floating: FC<{
       <AnimatePresence>
         {isVisible && (
           <motion.div 
-            className="z-50 fixed top-[10%] right-[1%] flex items-center justify-center bg-cover bg-center bg-no-repeat bg-[url('/images/fr-floating.png')] w-[10%] aspect-[193/546]"
+            className="z-50 fixed top-[10%] right-[1%] flex items-center justify-center bg-cover bg-center bg-no-repeat bg-[url('/images/fr-floating.webp')] w-[10%] aspect-[193/546]"
             initial={{ x: 100, opacity: 0, scale: 0.8 }}
             animate={{ 
               x: 0, 
@@ -90,7 +90,7 @@ const Floating: FC<{
                   ))}
                   
                   <motion.img 
-                    src="/images/btn-top.png" 
+                    src="/images/btn-top.webp" 
                     alt="" 
                     className="absolute -bottom-[8%] w-1/5 btn-image object-contain cursor-pointer" 
                     onClick={() => onScrollToTop()}
